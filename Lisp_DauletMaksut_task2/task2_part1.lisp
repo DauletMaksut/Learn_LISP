@@ -1,11 +1,11 @@
 ;Task 2 part 1.1 Max(depth factor: (14 2) (9 3) (7 4) (6 5) () ) 
 (print "Made by: DAULET MAKSUT")
 (terpri)
-
+(setq depth 14)
+(setq factor 2)
 
 (print "Task 1, part 1:")
-(setq depth 4)
-(setq factor 2)
+
 
 ;Go throw from every level of tree
 (defun createTree (level)
