@@ -1,8 +1,8 @@
 ;Task 2 part 1.1 Max(depth factor: (14 2) (9 3) (7 4) (6 5) () ) 
 (print "Made by: DAULET MAKSUT")
 (terpri)
-(setq depth 14)
-(setq factor 2)
+(setq depth 3)
+(setq factor 3)
 
 (print "Task 1, part 1:")
 
@@ -56,7 +56,7 @@
 ;Task 2 part 1.2
 (print "Task 1, part 2:")
 
-(defun createEasyTree (level)
+(defun createEasyTree ()
 	(setq result '())
 	(setq result (list (first task2)))
 	(setq task2 (rest task2))
@@ -91,7 +91,7 @@
 
 (setq task2 (copy-list letters))
 
-(setq please2 (createEasyTree depth))
+(setq please2 (createEasyTree))
 (print please2)
 
 
