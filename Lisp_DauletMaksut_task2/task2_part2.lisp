@@ -1,43 +1,71 @@
-(setf input '(A (B (E (N) (O) (P)) (F (Q) (R) (S)) (G (T) (U) (V)))
- (C (H (W) (X) (Y)) (I (Z) (AA) (AB)) (J (AC) (AD) (AE)))
- (D (K (AF) (AG) (AH)) (L (AI) (AJ) (AK)) (M (AL) (AM) (AN))))  )
-(print "Go and FUCK this shit")
-(print (string= NIL '()))
-(setf node "N")
+(setf input '(A (B (E) (F) (G)) (C (H) (I) (J)) (D (K) (L) (M)))   )
+(setf node "I")
+
+
+(print "Made by: DAULET MAKSUT")
+(terpri)
+(print "Task 2, part 1:")
+
 
 (defun bfs (input)
-	(setf parentName (first input))
-	(format t "~S " parentName)
-	(setf input (rest input))
-	(setq depth 1)
-	(let ((check NIL))
- 		(loop do
- 		(incf depth)
-        (setf check (findRecursion input 1 depth parentName))
-        while ( not check)
+	(format t "~S " (first input))
+	(setq depth 0)
+ 	(loop do
+    	(if (findRecursion input (setf depth (incf depth)))
+        	(return-from bfs t)
         )
  	)
 )
 
-(defun findRecursion (text currentLevel destinationLevel parentName)
-
-	(incf currentLevel)
-	(setf check NIL)
-	(dolist (childs text)
-		(format t "~S " (first childs))
-		(if (/= currentLevel destinationLevel)
-			(setf check (findRecursion (rest childs) currentlevel destinationLevel (first childs)))
-		)
-		(if (string= node (first childs))
-			(return-from findRecursion T)
-		)
-		(if (= currentLevel destinationLevel)
-			(format t "~S " parentName)
-		)
-		
-
+(defun findRecursion (text currentLevel)
+	(setq childrens (rest text))
+	(if (string= node (first text)) 
+		(return-from findRecursion t)
 	)
-	(return-from findRecursion check)
+	(if (= currentLevel 0)
+		(return-from findRecursion NIL)
+	)
+
+	(dolist (childs childrens)
+		(format t "~S " (first childs))
+		(setq nextLevel (- currentLevel 1))
+
+		(if (findRecursion childs nextLevel)
+			(return-from findRecursion t)
+		)
+		(format t "~S " (first text))
+	)
+	(return-from findRecursion NIL)
 )
 (terpri)
 (bfs input)
+
+
+
+(terpri)
+(print "Task 2, part 2:")
+(terpri)
+(defun printA (text)
+	(format t "~S " (first text))
+	(easePeasy text)
+)
+
+(defun easePeasy (text)
+	(setq childrens (rest text))
+	(if (string= node (first text)) 
+		(return-from easePeasy t)
+	)
+
+	(dolist (childs childrens)
+		(format t "~S " (first childs))
+
+		(if (easePeasy childs)
+			(return-from easePeasy t)
+		)
+		(format t "~S " (first text))
+	)
+	(return-from easePeasy NIL)
+)
+
+(printA input)
+
