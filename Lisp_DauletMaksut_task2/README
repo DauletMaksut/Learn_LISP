@@ -1,0 +1,51 @@
+
+
+================Daulet Makaut================
+
+*********************************************
+*					    *
+*		    Task 1                  *
+*					    *
+*********************************************
+
+1. For A and B part of Task 1, open 
+task2_part1.lisp and in the first line put
+your value for depth and factor in front of 
+proper variables and  save changes. For example 
+for depth 4 and factor 5, first two lines should 
+look like:
+	(setq depth 4)
+	(setq factor 5)
+	
+
+2. After that, open the terminal in folder where
+task2_part1.lisp file exist and copy paste next line:
+	clisp task2_part1.lisp
+
+3. Enjoy the output in the terminal
+
+
+
+
+*********************************************
+*					    *
+*		    Task 2                  *
+*					    *
+*********************************************
+
+1. For A and B part of Task 2, open 
+task2_part2.lisp and in the first line put your
+list in front of input variable and character which 
+should be found in found variable and 
+save changes. For examplee:
+	(setf input '(A (B (E) (F) (G)) (C (H) (I) (J)) (D (K) (L) (M)))   )
+	(setf node "K")
+	
+
+2. After that, open the terminal in folder where
+task2_part1.lisp file exist and copy paste next line:
+	clisp task2_part2.lisp
+
+3. Enjoy the output in the terminal
+
+

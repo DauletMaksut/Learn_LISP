@@ -1,8 +1,13 @@
+(setq depth 3)
+(setq factor 3)
+
+
+
+
 ;Task 2 part 1.1 Max(depth factor: (14 2) (9 3) (7 4) (6 5) () ) 
 (print "Made by: DAULET MAKSUT")
 (terpri)
-(setq depth 3)
-(setq factor 3)
+
 
 (print "Task 1, part 1:")
 
