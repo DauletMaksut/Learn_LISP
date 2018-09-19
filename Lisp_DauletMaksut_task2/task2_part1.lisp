@@ -1,10 +1,10 @@
-(setq depth 3)
-(setq factor 3)
+(setq depth 5)
+(setq factor 5)
 
 
 
 
-;Task 2 part 1.1 Max(depth factor: (14 2) (9 3) (7 4) (6 5) () ) 
+;Task 2 part 1.1 Max(depth factor: (14 2) (9 3) (7 4) (6 5) () )
 (print "Made by: DAULET MAKSUT")
 (terpri)
 
@@ -33,7 +33,7 @@
 	(dolist (x myList)
 		(setf tmp (append tmp (copy-list(list (append (list (first x)) (addChilds currentLevel targetLevel (rest x)) )) )))
 	)
-	tmp	
+	tmp
 )
 
 ;Delete conequtive elements from global var and returns it
@@ -98,14 +98,3 @@
 
 (setq please2 (createEasyTree))
 (print please2)
-
-
-
-
-
-
-
-
-
-
-
